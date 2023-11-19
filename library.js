@@ -36,3 +36,14 @@ let displayBooks = () => {
 }
 
 displayBooks();
+
+function addBook() {
+    const nameInput = prompt ('Enter book name: ')
+    const pagesInput = prompt ('Enter number of pages: ')
+
+    const newBook = new Book(nameInput, pagesInput);
+    myLibrary.push(newBook);
+    displayBooks();
+}
+
+addBook();
