@@ -30,6 +30,13 @@ myLibrary.forEach((element,index) => {
     pages.innerText = "pages: " + element.pages;
     card.appendChild(pages);
     
+    btnRemoveBook.innerHTML = '<img width="40px" height="40px" src="\Plus_symbol.svg.png" id="imgg">';
+    btnRemoveBook.onclick = () =>{
+        myLibrary.splice(cardContainer,1);
+        displayBooksCard();
+    }
+    card.appendChild(btnRemoveBook);
+    
     cardContainer.appendChild(card);
 });
 }
