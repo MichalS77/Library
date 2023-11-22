@@ -48,7 +48,7 @@
     margin: 5px;
     transform: translate(0px, -2px);
     transition: 0.2s;
-    
+
 }
 .active .line1{
     transform: rotate(45deg) translate(7px, 2px);
@@ -109,22 +109,22 @@ body {
     display: inline-block;
     z-index: 0;
   }
-nav{
+form{
     padding-top: 100px;
 }
-nav ul{
+form ul{
     margin: 0px 30px;
 }
-nav ul li{
+form ul li{
     list-style: none;
     margin-bottom: 30px;
     transition: 0.2s;
 }
-nav ul li:hover{
+form ul li:hover{
     background-color: #c6c6c66f;
     border-radius: 8px;
 }
-nav ul li a{
+form ul li a{
     color: #000;
     font-size: 28px;
     padding: 10px 30px;
