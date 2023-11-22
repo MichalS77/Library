@@ -11,30 +11,6 @@ const book2 = new Book('book2', 26);
 let myLibrary = [book1, book2];
 console.log(myLibrary);
 
-/* let displayBooks = () => { 
-    table.innerHTML = '';
-    
-    myLibrary.forEach((book) => {
-    let row = document.createElement('tr')
-    
-    let nameCell = document.createElement('td')
-    nameCell.innerText = book.name
-    row.appendChild(nameCell)
-    
-    let pagesCell = document.createElement('td')
-    pagesCell.innerText = book.pages
-    row.appendChild(pagesCell)
-    
-    let buttonCell = document.createElement('td')
-    let button = document.createElement('button');
-    button.innerText = 'Remove';
-    button.addEventListener ('click', () => addBook(index));
-    buttonCell.appendChild(button);
-    
-    table.appendChild(row);
-    });
-} */
-
 let displayBooksCard = () =>{
     const cardContainer = document.getElementById('cardContainer'); // Assuming you have a container with this ID in your HTML
     cardContainer.innerHTML = '';
@@ -45,24 +21,50 @@ myLibrary.forEach((element,index) => {
 
     let name = document.createElement('h2');
     let pages = document.createElement('h3');
+    let btnRemoveBook = document.createElement('btn');
+    let cardIndex = index;
+    
     name.innerText = element.name;
     card.appendChild(name);
 
     pages.innerText = "pages: " + element.pages;
-    card.appendChild(pages)
+    card.appendChild(pages);
+    
     cardContainer.appendChild(card);
 });
 }
 
 displayBooksCard();
 
-function addBook() {
-    const nameInput = prompt ('Enter book name: ')
-    const pagesInput = prompt ('Enter number of pages: ')
 
-    const newBook = new Book(nameInput, pagesInput);
+function addBook() {
+    let nameInput = document.querySelector('#nameInput');
+    const pagesInput = document.querySelector('#pagesInput');
+
+    const newBook = new Book(nameInput.value, pagesInput.value);
     myLibrary.push(newBook);
-    displayBooks();
+    displayBooksCard();
 }
+
+let menu_icon_box = document.querySelector(".menu_icon_box");
+let box = document.querySelector(".box");
+
+
+menu_icon_box.onclick = () => {
+    menu_icon_box.classList.toggle("active");
+    box.classList.toggle("active_box");
+}
+
+let btnAddBook = document.querySelector('#btnAddBook');
+
+btnAddBook.onclick = () => {
+    addBook();
+    nameInput.value = '';
+    pagesInput.value = '';
+}
+
+
+
+
 
 
