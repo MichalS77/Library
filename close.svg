@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="43.95092"
+   height="43.960339"
+   viewBox="0 0 43.95092 43.960339"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="close.svg"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showguides="false"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="103.59114"
+     inkscape:cy="2.298097"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect5"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ C,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="true"
+       hide_knots="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-42.630993,-157.32304)">
+    <path
+       id="rect6"
+       d="m 60.308642,172.32201 14.196739,14.19674 -2.693737,2.69374 -14.196739,-14.19674 z m 8.541847,5.43111 -14.196739,14.19674 -2.69374,-2.69374 14.196738,-14.19674 z m 12.645885,-12.64466 -14.196739,14.19674 -2.69374,-2.69374 14.196738,-14.19674 z m -14.197722,14.18711 14.196739,14.19674 -2.693737,2.69374 -14.196766,-14.19677 z m -2.69076,2.70024 -14.196739,14.19674 -2.69374,-2.69374 14.196739,-14.19674 z M 50.409191,162.42256 64.60593,176.6193 61.912193,179.31303 47.71541,165.11625 Z" />
+  </g>
+</svg>

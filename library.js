@@ -1,15 +1,9 @@
-let table = document.getElementById("myTable");
-
-function Book(name, pages) {
+function Book(name, pages, read) {
     this.name = name;
     this.pages = pages;
+    this.read = read;
 };
-
-const book1 = new Book('book1', 25);
-const book2 = new Book('book2', 26);
-
-let myLibrary = [book1, book2];
-console.log(myLibrary);
+    let myLibrary = new Array();
 
 let displayBooksCard = () =>{
     const cardContainer = document.getElementById('cardContainer'); // Assuming you have a container with this ID in your HTML
@@ -20,19 +14,42 @@ myLibrary.forEach((element,index) => {
     card.setAttribute('class', 'card');
 
     let name = document.createElement('h2');
-    let pages = document.createElement('h3');
-    let btnRemoveBook = document.createElement('btn');
+    let pages = document.createElement('p');
+    let btnRemoveBook = document.createElement('button');
+    let read = document.createElement('button');
     let cardIndex = index;
     
     name.innerText = element.name;
+    name.setAttribute('class', 'bookTitle');
     card.appendChild(name);
 
-    pages.innerText = "pages: " + element.pages;
+    pages.innerText =  element.pages + " pages";
+    pages.setAttribute('class', 'bookPages');
     card.appendChild(pages);
+
+    let readLabel =  document.createElement('label');
+    readLabel.innerText = 'read?';
+    card.appendChild(readLabel);
+
+    read.innerHTML = element.read;
+    read.onclick = () => {
+        if(read.innerHTML == 'Not Read'){
+            read.innerHTML = 'Read'
+        }else{read.innerHTML = 'Not Read'
+        }
+    }
+    btnReadInput.onclick = () => {
+        if(btnReadInput.innerHTML == 'Not Read'){
+            btnReadInput.innerHTML = 'Read'
+        }else{btnReadInput.innerHTML = 'Not Read'
+        }
+    }
+    card.appendChild(read);
     
-    btnRemoveBook.innerHTML = '<img width="40px" height="40px" src="\Plus_symbol.svg.png" id="imgg">';
+    btnRemoveBook.innerHTML = '<img width="20px" height="20px" src="\close.svg" id="imgg">';
+    btnRemoveBook.setAttribute('class', 'btnRemoveCard');
     btnRemoveBook.onclick = () =>{
-        myLibrary.splice(cardContainer,1);
+        myLibrary.splice(cardIndex,1);
         displayBooksCard();
     }
     card.appendChild(btnRemoveBook);
@@ -41,14 +58,11 @@ myLibrary.forEach((element,index) => {
 });
 }
 
-displayBooksCard();
-
-
 function addBook() {
     let nameInput = document.querySelector('#nameInput');
-    const pagesInput = document.querySelector('#pagesInput');
+    let pagesInput = document.querySelector('#pagesInput');
 
-    const newBook = new Book(nameInput.value, pagesInput.value);
+    const newBook = new Book(nameInput.value, pagesInput.value, btnReadInput.innerHTML);
     myLibrary.push(newBook);
     displayBooksCard();
 }
@@ -56,19 +70,33 @@ function addBook() {
 let menu_icon_box = document.querySelector(".menu_icon_box");
 let box = document.querySelector(".box");
 
-
 menu_icon_box.onclick = () => {
     menu_icon_box.classList.toggle("active");
     box.classList.toggle("active_box");
 }
 
+
 let btnAddBook = document.querySelector('#btnAddBook');
 
 btnAddBook.onclick = () => {
+    if(!nameInput.value == '' && !pagesInput.value == ''){
     addBook();
+    }else alert('All fields required!')
     nameInput.value = '';
     pagesInput.value = '';
+    btnReadInput.innerHTML = 'Not Read';
+    menu_icon_box.classList.remove("active");
+    box.classList.remove("active_box");
 }
+
+let btnReadInput = document.querySelector('#btnReadInput');
+btnReadInput.onclick = () => {
+    if(btnReadInput.innerHTML == 'Not Read'){
+        btnReadInput.innerHTML = 'Read'
+    }else{btnReadInput.innerHTML = 'Not Read'
+    }
+}
+
 
 
 

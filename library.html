@@ -5,30 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="library.css">
-    <h1 id="title">Library</h1>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton|Yeseva+one|Josefin+Sans">
 </head>
 <body>
-    
+<header>
+    <h1 id="title">Library</h1>
+</header>
     <div class="container">
         <div class="menu_icon_box">
-            <img width="80px" height="80px" src="\Plus_symbol.svg.png" id="imgg">
-            
+            <img src="\drawing.svg" id="imgg">      
         </div>
 
         <div class="box">
-        <form>
                 <ul>
-                    <li><label>name   </label><input type="text" id="nameInput"></li>
-                    <li><label>pages </label><input type="number" id="pagesInput"></li>
-                    <li><button id="btnAddBook">Add Book</button>
-                    
+                    <li><label>Name   </label><input type="text" id="nameInput"></li>
+                    <li><label>Pages </label><input type="number" id="pagesInput"></li>
+                    <li><button id="btnReadInput" value="Not Read">Not Read</button></li>
+                    <li><button id="btnAddBook">Add Book</button>         
                 </ul>
-        </form>
         </div>
     </div>
         <div id="cardContainer"></div>
         <script src="library.js"></script>
-    
 </body>
-
 </html>
