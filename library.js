@@ -6,19 +6,19 @@ function Book(name, pages, read) {
     let myLibrary = new Array();
 
 let displayBooksCard = () =>{
-    const cardContainer = document.getElementById('cardContainer'); // Assuming you have a container with this ID in your HTML
+    const cardContainer = document.getElementById('cardContainer');
     cardContainer.innerHTML = '';
 
 myLibrary.forEach((element,index) => {
     let card = document.createElement('div');
     card.setAttribute('class', 'card');
 
-    let name = document.createElement('h2');
+    let name = document.createElement('p');
     let pages = document.createElement('p');
     let btnRemoveBook = document.createElement('button');
     let read = document.createElement('button');
     let cardIndex = index;
-    
+
     name.innerText = element.name;
     name.setAttribute('class', 'bookTitle');
     card.appendChild(name);
@@ -26,10 +26,6 @@ myLibrary.forEach((element,index) => {
     pages.innerText =  element.pages + " pages";
     pages.setAttribute('class', 'bookPages');
     card.appendChild(pages);
-
-    let readLabel =  document.createElement('label');
-    readLabel.innerText = 'read?';
-    card.appendChild(readLabel);
 
     read.innerHTML = element.read;
     read.onclick = () => {
